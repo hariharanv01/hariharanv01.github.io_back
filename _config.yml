@@ -7,45 +7,37 @@
 
 # Site settings
 react:
-  title: Material Bliss
-  name: Andrew Plaza
-  menu_right_subtitle: Blogger || Computer Scientist
-  avatar: http://api.adorable.io/avatar/aplaza@liquidthink.net
-  logo: static/img/logo_theme.jpg
-  email: aplaza@liquidthink.net
+  title: Memoizable
+  name: Hariharan Viswanathan
+  menu_right_subtitle: Polyglot coder | Distributed architecture enthusiast
+  avatar: https://avatars2.githubusercontent.com/u/7565404?s=400&u=cf5879915d2919967214e740195e1d7196fe0682&v=4
+  logo: static/img/memoize/memoize.png
+  email: hariharanv01@gmail.com
   description: > # this means to ignore newlines until "baseurl:"
-    Write an awesome description for your new site here. You can edit this
-    line in _config.yml. It will appear in your document head meta (for
-    Google search results) and in your feed.xml site description.
+    An avid Coder with 10 plus years' experience in product and system development. Designed and developed highly scalable, distributed and performant large-scale systems that handle millions of requests every day
   baseurl: "" # the subpath of your site, e.g. /blog
-  url: "http://test_domain.com:4000" # the base hostname & protocol for your site
+  url: "http://memoizable.com" # the base hostname & protocol for your site
   permalink: /posts/:title
   social:
-    twitter: http://twitter.com/liquid_think
-    github: http://github.com/InsidiousMind
-    facebook: http://facebook.com/liquidthinknet
-    code: http://livecoding.tv/insidious #livecoding.tv handle
-    google-plus: http://plus.google.com/+LiquidthinkNet #make sure to include the '+'
-    rss: feed.xml
+    github: http://github.com/hariharanv01
+    linkedin: https://www.linkedin.com/in/hariharanviswanathan/
+    rss: http://memoizable.com/feed.xml
 
 
 
-title: Material Bliss
-name: Andrew Plaza
-menu_right_subtitle: Blogger || Computer Scientist
-avatar: http://api.adorable.io/avatar/aplaza@liquidthink.net
-logo: static/img/logo.png
-email: aplaza@liquidthink.net
+title: Memoizable
+name: Hariharan Viswanathan
+menu_right_subtitle: Coder
+avatar: https://avatars2.githubusercontent.com/u/7565404?s=400&u=cf5879915d2919967214e740195e1d7196fe0682&v=4
+logo: static/img/memoize/res/mipmap-xhdpi/memoize.png
+email: hariharanv01@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  An avid Coder with 10 plus years' experience in product and system development. Designed and developed highly scalable, distributed and performant large-scale systems that handle millions of requests every day
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://test_domain.com:4000" # the base hostname & protocol for your site
+url: "http://memoizable.com" # the base hostname & protocol for your site
 permalink: /posts/:title
 
-twitter_username: liquid_think
-github_username: InsidiousMind
+github_username: hariharanv01
 
 
 # Build settings
@@ -84,7 +76,6 @@ assets:
     - src/_assets/css
     - src/_assets/fonts
     - src/_assets/img
-    - src/_assets/projects
 
   features:
     liquid: false
@@ -94,7 +85,7 @@ assets:
 
 exclude: ['node_modules', 'Gemfile', '.asset-cache', 'build-prod.sh', 'build-dev.sh']
 
-gems:
+plugins_dir:
   - jekyll-assets
   - jekyll_pages_api
   - jekyll-react

@@ -25,6 +25,9 @@ module Jekyll
       new_page('config.json', config_json, self.dest_dir)
       parse_pages
       parse_data
+      @site.pages.each do |page|
+        page.data['body'] = ''
+      new_page('pages_mini.json', @site.pages.to_json, self.dest_dir)
     end
     
     def parse_pages

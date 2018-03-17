@@ -21,10 +21,11 @@ const renderChips = (data) => data.map((tag) => (
   <Chip key={tag} style={styles.chip}> {tag} </Chip>));
 
 const createMarkup = (post) => {
-  let body = post.body.split(' ');
-  body = body.slice(0, 50);
-  body = body.join(' ');
-  return `${body}...`;
+  // let body = post.body.split(' ');
+  // body = body.slice(0, 50);
+  // body = body.join(' ');
+  // return `${body}...`;
+  return `${post.meta.description}...`
 };
 
 const getCategories = (categories) => categories.map((cat) => `${cat} `);

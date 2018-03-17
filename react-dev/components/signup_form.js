@@ -38,16 +38,7 @@ export default class SignupForm extends Component {
        noValidate
      >
       <div id="mc_embed_signup_scroll">
-        <div>
-        <label htmlFor="mce-EMAIL">Subscribe!!</label>
-        </div>
-        <TextField
-          type="email"
-          value={this.state.value}
-          name="EMAIL"
-          hintText="Email"
-          onChange={this.handleChange}
-        />
+        
           { /* don't touch this part */ }
           <div style={styles.robotDiv} aria-hidden="true">
             <input
@@ -57,7 +48,6 @@ export default class SignupForm extends Component {
               value=''
             />
           </div>
-          <RaisedButton type="submit" label="Subscribe" name="subscribe" secondary />
       </div>
      </form>
    </div>

@@ -8,7 +8,7 @@ import { SocialMediaList } from './social_media_list';
 
 import { getLink } from '../helpers';
 
-const menuItems = { Home: '/', About: '/about/', Projects: '/projects/' };
+const menuItems = { Home: '/', About: '/about/' };
 
 const styles = {
   spanSocial: {

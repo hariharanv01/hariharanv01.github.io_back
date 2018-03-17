@@ -390,3 +390,18 @@ pre {
   height: auto;
   width: auto;
 }
+
+//Kramdown table
+table{
+    border-spacing: 0;
+    border:2px solid gray;
+    color: #607D8B;
+}
+
+th{
+    border:2px solid gray;
+}
+
+td{
+    border:1px solid gray;
+}
