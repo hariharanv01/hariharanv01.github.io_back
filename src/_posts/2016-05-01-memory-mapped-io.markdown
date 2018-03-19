@@ -69,7 +69,7 @@ To understand why, we need to understand how bytes are transferred between the j
 
 Whenever the java process needs to read a file, the java process makes an OS call to read the specified number of bytes from the file. The OS makes use of DMA(Direct Memory Access) to copy the requested content from the disk to the page cache in the main memory. Note that DMA does not involve any CPU cycles, so the CPU cycles are available for processes to execute instructions. The DMA copies the content from the disk to the OS' page cache and not directly to the application's cache(in this case the Java heap). This is a limitation provided by the OS for various reasons such as security, data consistency, etc. This data needs to be copied from the page cache to the java heap. The copying of data from the page cache to the java heap involves CPU cycles. The larger the data size, the more the CPU cycles needed. Also, one more thing to note is that the data is duplicated - one in the page cache and one in the java heap. The larger the data size the more the memory required (almost double).
 
-![Normal IO]({{site.url}}/static/img/normal_io.svg)
+![Normal IO]({{site.ourl}}/static/img/normal_io.svg)
 
 As you could have guessed by now, there are some limitations to this approach of reading/writing data.
 
@@ -92,7 +92,7 @@ FileInputStream fs = new FileInputStream(file);
 MappedByteBuffer buff = fs.getChannel().map(FileChannel.MapMode.READ, 0, 4194304);
 
 ```
-![Normal IO]({{site.url}}/static/img/mm_io.svg)
+![Normal IO]({{site.ourl}}/static/img/mm_io.svg)
 
 This ensures that both the application and the cache reads the data from the same physical location, thus eliminating data duplication and the extra CPU cycles. Thus Memory mapped IO is a lot faster than the normal IO for large files. It also takes less memory.
 

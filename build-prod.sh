@@ -4,4 +4,5 @@ bundle install &&
 bundle update &&
 npm run build &&
 ./generate-static.sh &&
-bundle exec jekyll build
+JEKYLL_ENV=production
+bundle exec jekyll serve --config _config.yml

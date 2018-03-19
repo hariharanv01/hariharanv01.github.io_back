@@ -46,7 +46,7 @@ func = add
 
 Higher order function is a function that takes function as an input parameter or returns functions or does both. This is a very powerful arsenal in functional programming that leads to very minimal code and brings in a lot of code reusability.
 
-Let's delve with some example. We need a function that takes a list and returns all elements divisible by 2. We use [List comprehension]({{site.url}}/posts/ist-comprehension.html) for simplicity.
+Let's delve with some example. We need a function that takes a list and returns all elements divisible by 2. We use [List comprehension]({{site.ourl}}/posts/ist-comprehension.html) for simplicity.
 
 ```python
 
@@ -132,7 +132,7 @@ There are lot of benefits making functions pure. Some are
 
 1. Since pure functions are side-effect free, we can retry them any number of times since we know that all it's doing is working on the input to compute the output and not messing around with anything else.
 
-2. Pure functions are referentially transparent. This means we can replace the function call with the actual result. For eg. `add(2,3)` can be replaced with 5 since we know that the function will always return 5 for inputs 2 and 3; and if `f(x) = x*x` and `g(x) = f(x) + f(2*x)`, we can replace g(x) as `g(x) = (x*x) + ((2*x)*(2*x))` since we know that f(x) will always return x\*x and does nothing else. This equatable reasoning makes it easier to reason about the behavior of programs. One other advantage of Referential transparency is the ability to memoize(cache) the result of computations. This is very useful for computationally intensive functions; we can compute the result once and cache it and if this function is invoked again with the same input, we can serve it from the cache instead of computing it all again. We can [Memoize]({{site.url}}/posts/python-version-of-groovy-s-memoize.html) the result since we know that the output is going to be the same for the given input.
+2. Pure functions are referentially transparent. This means we can replace the function call with the actual result. For eg. `add(2,3)` can be replaced with 5 since we know that the function will always return 5 for inputs 2 and 3; and if `f(x) = x*x` and `g(x) = f(x) + f(2*x)`, we can replace g(x) as `g(x) = (x*x) + ((2*x)*(2*x))` since we know that f(x) will always return x\*x and does nothing else. This equatable reasoning makes it easier to reason about the behavior of programs. One other advantage of Referential transparency is the ability to memoize(cache) the result of computations. This is very useful for computationally intensive functions; we can compute the result once and cache it and if this function is invoked again with the same input, we can serve it from the cache instead of computing it all again. We can [Memoize]({{site.ourl}}/posts/python-version-of-groovy-s-memoize.html) the result since we know that the output is going to be the same for the given input.
 
 3. Pure functions are less error prone and easily testable, since they are computational contexts themselves and do not depend on external environment.
 
@@ -159,7 +159,7 @@ let list2 = 0 : list1 		-- a new list with 0 prepended to list1
 
 We might think that list2 is a new copy of list1. However, that's not the case here.
 
-![Functional Data Structure]({{site.url}}/static/img/functional_ds.png)
+![Functional Data Structure]({{site.ourl}}/static/img/functional_ds.png)
 
 
 As you can see from the above image, both list1 and list2 are using the same underlying data as the existing data itself cannot be changed. This approach - unfortunately - will not work on every case. For example it will not work while appending elements to a list, in which case a new copy of the entire list need to be made.

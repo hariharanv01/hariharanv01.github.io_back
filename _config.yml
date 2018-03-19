@@ -16,14 +16,23 @@ react:
   description: > # this means to ignore newlines until "baseurl:"
     An avid Coder with 10 plus years' experience in product and system development. Designed and developed highly scalable, distributed and performant large-scale systems that handle millions of requests every day
   baseurl: "" # the subpath of your site, e.g. /blog
-  url: "http://memoizable.com" # the base hostname & protocol for your site
+  ourl: "http://memoizable.com" # the base hostname & protocol for your site
+  url: "http://memoizable.com"
   permalink: /posts/:title
   social:
     github: http://github.com/hariharanv01
     linkedin: https://www.linkedin.com/in/hariharanviswanathan/
     rss: http://memoizable.com/feed.xml
+  detach:  false
+  port:    80
+  # host:    memoizable.com
+  show_dir_listing: false
 
-
+detach:  false
+port:    80
+host:    127.0.0.1
+baseurl: "" # does not include hostname
+show_dir_listing: false
 
 title: Memoizable
 name: Hariharan Viswanathan

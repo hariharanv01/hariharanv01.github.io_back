@@ -38,7 +38,7 @@ OAuth2 starts with the Client registering itself with the Service provider. It's
 
 Facebook registers itself as a client with GMail, and is issued aa client id and secret. James logs into Facebook. He's seeing a new link in Facebook saying "Import your GMail contacts". On clicking it he is redirected to GMail's login page. James is happy now - he knows that he's entering his GMail credentials in GMail login page and not sharing it with Facebook. The login page also shows what all information Facebook will be able to access in James' GMail account. 
 
-![Auth Consent page]({{site.url}}/static/img/OAuth_authorization_interface.png)
+![Auth Consent page]({{site.ourl}}/static/img/OAuth_authorization_interface.png)
 
 As you can see the consent page shows clearly who is the Client and what is it trying to access. James now knows that Facebook will be able to access only his contact list and not read his email or other GMail stuff. Once he's consented, he is redirected to a Facebook page which suggests him the list of friends he can add.
 
@@ -153,7 +153,7 @@ OAuth2 has more than one way for retrieving the access token. The flow we discus
 
 We have already discussed the Authorization code grant in the Facebook-GMail scenario. The intermediary auth code is used here for multiple reasons. Foremost is to ensure that the token is never exposed to anyone else other than the Client itself - this won't be the case if the Service provider redirects the user with the token instead of the code. Also, Client secret cannot be sent to the user-agent by any means.
 
-![Auth code grant]({{site.url}}/static/img/auth_code.jpg)
+![Auth code grant]({{site.ourl}}/static/img/auth_code.jpg)
 
 
 ### Implicit Grant
@@ -162,21 +162,21 @@ Sometimes, the Client will be a dumb client - not a server and like mobile apps,
 
 These clients, hence, will need to use implicit grant type. In this grant type, Clients are issued directly the Access token after resource owner consent.
 
-![Implicit grant]({{site.url}}/static/img/implicit.jpg)
+![Implicit grant]({{site.ourl}}/static/img/implicit.jpg)
 
 
 ### Client credentials Grant
 
 In this grant type, Clients themselves are the resource owner as well. Clients are issued tokens solely on the basis of Client credentials with any user consent. eg. Facebook has a GMail corporate account, and wants to access it. This grant can also be used to give trusted clients access to resources. For eg. Google Ads service wants to read all GMail users' emails to show them more relevant ads. GMail can issue Google Ads a token with which Google Ads can read user emails but not change his email settings or send mail on his behalf.
 
-![Client creds grant]({{site.url}}/static/img/client_creds.jpg)
+![Client creds grant]({{site.ourl}}/static/img/client_creds.jpg)
 
 
 ### Resource owner password Grant
 
 If the resource owner trusts the Client, he can share his Service Provider credentials with the Client. In this grant, Client goes to Service Provider with the resource owner's credentials and gets the access token. The difference between the password sharing approach we discussed earlier and this one is that there is well define scopes here.
 
-![Resource owner grant]({{site.url}}/static/img/ro_creds.jpg)
+![Resource owner grant]({{site.ourl}}/static/img/ro_creds.jpg)
 
 
 ### Refresh token Grant

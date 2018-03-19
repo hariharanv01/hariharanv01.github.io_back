@@ -220,5 +220,5 @@ println(incFunc(10))
 
 13) Scala supports closure as well.
 
-14) Scala also supports [Call-by name]({{site.url}}/posts/scala-call-by-name.html)
+14) Scala also supports [Call-by name]({{site.ourl}}/posts/scala-call-by-name.html)
 
