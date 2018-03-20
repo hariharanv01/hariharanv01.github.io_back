@@ -9,7 +9,7 @@ var CompressionPlugin = require('compression-webpack-plugin');
 const config = {
 
   entry: './react-dev/router.js',
-  cache: false,
+  cache: true,
   devtool: 'cheap-module-source-map',
   // webpack folder's entry js - excluded from jekll's build process.
   output: {
@@ -32,7 +32,7 @@ const config = {
       algorithm: "gzip",
       test: /\.js$|\.css$|\.html$/,
       threshold: 10240,
-      minRatio: 0
+      minRatio: 0.5
     }),
     new webpack.optimize.UglifyJsPlugin({
       mangle: true,

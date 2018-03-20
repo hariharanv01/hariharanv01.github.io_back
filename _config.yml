@@ -30,7 +30,7 @@ react:
 
 detach:  false
 port:    80
-host:    127.0.0.1
+host:    0.0.0.0
 baseurl: "" # does not include hostname
 show_dir_listing: false
 
@@ -62,7 +62,9 @@ destination: public
 assets:
   compress:
     css: sass
-    js: false
+    js: true
+  cachebust: hard  
+  gzip: [ text/css, application/javascript ]  
 
   autowrite: true
   cache: .asset-cache
@@ -98,3 +100,11 @@ plugins_dir:
   - jekyll-assets
   - jekyll_pages_api
   - jekyll-react
+
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*.memoizable.com"
+    Access-Control-Allow-Methods: "GET,HEAD,OPTIONS"
+
+sass:
+  style: compressed

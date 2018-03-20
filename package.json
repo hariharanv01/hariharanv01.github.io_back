@@ -20,12 +20,8 @@
     "webpack",
     "react"
   ],
-  "author": "Andrew Plaza",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/allizad/jekyll-webpack/issues"
-  },
-  "homepage": "https://github.com/InsidiousMind/material-bliss-jekyll-theme#readme",
+  "homepage": "https://github.com/hariharanv01/hariharanv01.github.io/#readme",
   "devDependencies": {
     "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
