@@ -1,5 +1,6 @@
 import React from 'react';
-import _ from 'lodash';
+import reverse from 'lodash.reverse';
+import isEmpty from 'lodash.isempty';
 
 import Paper from 'material-ui/Paper';
 import FontIcon from 'material-ui/FontIcon';
@@ -41,7 +42,7 @@ const getReadTime = (post) => {
   return `Reading time ${readingTime} min. Word count: ${count}`;
 };
 
-const renderPosts = (props) => _.reverse(props.posts.map((post) => {
+const renderPosts = (props) => reverse(props.posts.map((post) => {
   const postLink = `${props.siteInfo.url}${post.url}`;
 
   return (
@@ -83,7 +84,7 @@ const renderPosts = (props) => _.reverse(props.posts.map((post) => {
 }));
 
 export const PostIndexItem = (props) => {
-  if (_.isEmpty(props.posts)) {
+  if (isEmpty(props.posts)) {
     return <li> No Results </li>;
   }
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { html_beautify } from 'js-beautify';
 import fse from 'fs-extra';
-import _ from 'lodash';
+import forOwn from 'lodash.forown';
 
 import Post from './pages/post';
 import Default from './pages/default';
@@ -24,7 +24,7 @@ renderStatic(<Default />, './src/_layouts/default.html');
 //layout: default
 //---
 //to them
-_.forOwn(files, (key, value) => {
+forOwn(files, (key, value) => {
   const data = fse.readFileSync(key);
   const fd = fse.openSync(key, 'w+');
   const layout = '---\nlayout: default\n---\n';

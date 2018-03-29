@@ -1,7 +1,8 @@
 import React from 'react';
 import IconButton from 'material-ui/IconButton';
 import { green900 } from 'material-ui/styles/colors';
-import _ from 'lodash';
+import forEach from 'lodash.foreach';
+import isEmpty from 'lodash.isempty';
 
 const iconStyles = {
   icon: {
@@ -21,7 +22,7 @@ const iconStyles = {
 //then render the FontIcon
 const renderIcons = (social) => {
     const result = [];
-  _.forEach(social, (value, key) => {
+  forEach(social, (value, key) => {
     result.push(
       <IconButton
         iconClassName={`zmdi zmdi-${key}`}
@@ -39,7 +40,7 @@ const renderIcons = (social) => {
 
 
 export const SocialMediaList = (props) => {
-    if (_.isEmpty(props.social)) {
+    if (isEmpty(props.social)) {
        return <span />;
      }
      return (

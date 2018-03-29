@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
+import debounce from 'lodash.debounce';
+import isEmpty from 'lodash.isempty';
 import { connect } from 'react-redux';
 
 import IconButton from 'material-ui/IconButton';
@@ -39,12 +40,12 @@ class SearchBar extends Component {
   }
 
   handleUpdateInput = (term, data, params) => {
-    const debFetch = _.debounce(this.props.fetchPosts, 400);
+    const debFetch = debounce(this.props.fetchPosts, 400);
     debFetch(term);
   }
 
   postTitles = () => {
-    if (_.isEmpty(this.props.posts)) {
+    if (isEmpty(this.props.posts)) {
       return [];
     }
     return this.props.posts.map(post => post.title);

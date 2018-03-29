@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import forEach from 'lodash.foreach';
 
 import MenuItem from 'material-ui/MenuItem';
 import { Card, CardActions, CardHeader, CardTitle, CardText } from 'material-ui/Card';
@@ -26,7 +26,7 @@ const getMenuItem = (name, path, url) => getLink(
 
 const renderMenuItems = (url) => {
   const result = [];
-   _.forEach(menuItems, (value, key) => {
+   forEach(menuItems, (value, key) => {
       result.push(getMenuItem(key, value, url));
   });
   return result.map((item) => item);

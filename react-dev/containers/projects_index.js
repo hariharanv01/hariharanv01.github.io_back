@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 
-import _ from 'lodash';
+import isEmpty from 'lodash.isempty';
 
 import { Card, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import Masonry from 'react-masonry-component';
@@ -65,7 +65,7 @@ class ProjectsIndex extends Component {
   }
 
   render() {
-    if (_.isEmpty(this.props.projects) || !this.props.config) {
+    if (isEmpty(this.props.projects) || !this.props.config) {
       return (
         <div />
       );
