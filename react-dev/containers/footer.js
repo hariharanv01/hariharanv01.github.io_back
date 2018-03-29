@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 
 import { fetchSiteInfo } from '../actions/index';
 import { SocialMediaList } from '../components/social_media_list';
-import SignupForm from '../components/signup_form';
 
 class Footer extends Component {
   componentWillMount() {
@@ -29,9 +28,6 @@ class Footer extends Component {
             </div>
             <div className="footer-col footer-col-2">
               <SocialMediaList social={this.props.config.social} />
-          </div>
-          <div className="footer-col footer-col-3" >
-            <SignupForm />
           </div>
         </div>
       </div>

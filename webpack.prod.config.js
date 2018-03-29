@@ -36,6 +36,8 @@ const config = {
     }),
     new webpack.optimize.UglifyJsPlugin({
       mangle: true,
+      beautify: false,
+      parallel: true,
       compress: {
         warnings: false,
         pure_getters: true,

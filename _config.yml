@@ -103,7 +103,7 @@ plugins_dir:
 
 webrick:
   headers:
-    Access-Control-Allow-Origin: "*.memoizable.com"
+    Access-Control-Allow-Origin: "*"
     Access-Control-Allow-Methods: "GET,HEAD,OPTIONS"
 
 sass:

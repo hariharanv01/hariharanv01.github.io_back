@@ -8,7 +8,6 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import { SignupForm } from '../components/signup_form';
 import { SocialMediaStatic } from './social_media_static';
 
 const muiTheme = getMuiTheme(darkBaseTheme, {
@@ -45,9 +44,6 @@ export const Footer = () => {
             </div>
             <div className="footer-col footer-col-2" >
               <SocialMediaStatic />
-            </div>
-           <div className="footer-col footer-col-3">
-             <SignupForm />
             </div>
           </div>
         </div>
