@@ -10,6 +10,7 @@ src/.asset-cache
 webpack/npm-debug.log
 src/_assets/js/bundle.js
 .idea
+.vscode/
 .asset-cache
 .jekyll-cache
 .DS_Store
